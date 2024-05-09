@@ -1,1 +1,1 @@
-cs5008 with Prof. Lee
+cs5008 with Yao Chong Chow yao.chong.chow@gmail.com
