@@ -4,7 +4,7 @@
 // email: chow.ya@northeastern.edu
 
 int main() {
-  printf("Hello World.  This is Yao Chong Chow.\n");
+  printf("Hello World. This is Yao Chong Chow CS5008.\n");
   printf("I am assignment 1 for Summer 2024.\n");
   return 0;
 }
