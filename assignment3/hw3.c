@@ -86,11 +86,8 @@ bool isEmpty(queue_t* q_p) {
   bool b = true;   // temporary bool to hold return value - initalize to default value
 
   // ***** INSERT YOUR CODE HERE *****
-  if (q_p != NULL) {
-    b = (q_p->head_p == NULL);
-  }
-  else{
-    b=true;
+  if (q_p->head_p  != NULL && q_p->tail_p !=NULL) {
+    b = false;
   }
 
   return b;
