@@ -1,5 +1,5 @@
-// name: <your name here>
-// email: <your email here>
+// name: Yao Chong Chow
+// email: chow.ya@northeastern.edu
 
 #include <stdio.h>   // stardard input/output library
 #include <stdbool.h> // standard boolean library: bool, true, false
@@ -72,7 +72,12 @@ queue_t* newQueue() {
   queue_t* q_p;   // temp pointer to hold newly created queue
 
   // ***** INSERT YOUR CODE HERE *****
-  
+  q_p=(queue_t*)malloc(sizeof(queue_t));
+
+  if (q_p != NULL) {
+  q_p->head_p = NULL;
+  q_p->tail_p = NULL;
+  }
   return q_p;
 };
 
@@ -81,7 +86,13 @@ bool isEmpty(queue_t* q_p) {
   bool b = true;   // temporary bool to hold return value - initalize to default value
 
   // ***** INSERT YOUR CODE HERE *****
-  
+  if (q_p != NULL) {
+    b = (q_p->head_p == NULL);
+  }
+  else{
+    b=true;
+  }
+
   return b;
 };
 
@@ -95,11 +106,22 @@ void enqueue(queue_t* q_p, int d) {
       // queue is empty so insertion is easy
 
       // ***** INSERT YOUR CODE HERE *****
+      n_p = newNode(d);
+      if (n_p != NULL) {
+        q_p->head_p = n_p;
+        q_p->tail_p = n_p;
+      }
 
     } else {
       // queue is not empty
 
       // ***** INSERT YOUR CODE HERE *****
+      n_p = newNode(d);
+      if (n_p != NULL) {
+        q_p->tail_p->right_p = n_p;
+        n_p->left_p = q_p->tail_p;
+        q_p->tail_p = n_p;
+      }
 
     }    
   }
@@ -122,11 +144,16 @@ int dequeue(queue_t* q_p) {
           // only one node in the queue, clear queue head and tail 
 
           // ***** INSERT YOUR CODE HERE *****
-	  
+	        q_p->head_p = NULL;
+          q_p->tail_p = NULL;
 	} else {
           // mulitple nodes in queue, clean up head pointer and new head of queue
 
 	  // ***** INSERT YOUR CODE HERE *****
+          q_p->head_p = n_p->right_p;
+          if (q_p->head_p != NULL) {
+            q_p->head_p->left_p = NULL;
+          }
 	  
 	}
 	
