@@ -38,7 +38,14 @@ void selection_sort_2arr(int* source, int* dest, bool* valid)
   for (int i=0; i<LIMIT; i++) {
 
   // INSERT YOUR CODE HERE
-
+    smallest = -1;
+    for (int j = 0; j < LIMIT; j++) {
+      if (valid[j] && (smallest == -1 || source[j] < source[smallest])) {
+        smallest = j;
+      }
+    }
+    dest[i] = source[smallest]; // Store the sorted element in dest array
+    valid[smallest] = false; // Mark the element as used
   }
 }
 
@@ -51,7 +58,16 @@ void selection_sort_1arr(int* source)
   for (int i=0; i<LIMIT; i++) {
 
   // INSERT YOUR CODE HERE
+    smallest=i;
 
+    for (int j=i+1; j<LIMIT; j++){
+      if (source[smallest]>source[j]){
+        smallest=j;
+      }
+    }
+    temp = source[i];
+    source[i] = source[smallest];
+    source[smallest] = temp;
   }
 }
 
@@ -75,8 +91,8 @@ int main(){
   printf("Source array:\n");
   print_array(source, 20);
 
-  //Selection sort with 2 array
-  //print out sorted array by 2 array in rows of 10
+  // Selection sort with 2 array
+  // print out sorted array by 2 array in rows of 10
   selection_sort_2arr(source, dest, valid);
   printf("Sorted array by 2 array:\n");
   print_array(dest, 10);
