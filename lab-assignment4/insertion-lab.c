@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 //Yao Chong Chow
 //chow.ya@northeastern.edu
+=======
+//enter your name here
+//enter your email here
+>>>>>>> upstream/main
 //To perform insertion sort of integers stored in a file and display the output and store it in another file.
 #include <stdio.h>
 #include<stdlib.h>
@@ -11,7 +16,11 @@ int main()
     /*count will have the total number of elements in the array*/
 
     /*read the file*/
+<<<<<<< HEAD
     fp=fopen("Input1.txt","r");
+=======
+    fp=fopen("Input.txt","r");
+>>>>>>> upstream/main
     if(fp==NULL){
         //if file returns NULL then can't open the file
         printf("\n Cannot open the file \n");
@@ -19,6 +28,7 @@ int main()
     }
     
     //insert your code here
+<<<<<<< HEAD
     while (fscanf(fp, "%d", &arr[count]) == 1) {
         count++;
     }
@@ -50,6 +60,14 @@ int main()
     }
     
     fclose(op);
+=======
+    
+    
+    
+    
+    
+    
+>>>>>>> upstream/main
     
     return 0;
 }
