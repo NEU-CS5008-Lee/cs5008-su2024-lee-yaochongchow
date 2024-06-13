@@ -1,5 +1,5 @@
-// name: <your name here>
-// email: <your email here>
+// name: Yao Chong Chow
+// email: chow.ya@northeastern.edu
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -37,10 +37,28 @@ char upperChar(char c){
 void quicky(char* data, int left, int right) {
 
   // ADD YOUR CODE HERE
+  if(left<right){
+  int i = left -1;
+  int pivot_val = data[right];   	// Pivot is the last element
+  int tmp;
 
+  for(int j = left; j<right; j++) {
+    if(data[j] <= pivot_val) {
+      tmp = data[++i];
+      data[i] = data[j];
+      data[j] = tmp;
+      }
+    }
+    tmp = data[i+1];
+    data[i+1] = data[right];
+    data[right] = tmp;
+
+    int pivot_index = i + 1;
+    quicky(data, left, pivot_index - 1);
+    quicky(data, pivot_index + 1, right);
+  }
   return;
 }
-
 
 
 int main(){
