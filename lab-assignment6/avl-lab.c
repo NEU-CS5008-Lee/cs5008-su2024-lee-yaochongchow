@@ -1,5 +1,5 @@
-/*---enter your name here----*/
-/*---enter your email here-----*/
+//Name: Yao Chong Chow
+//Email: chow.ya@northeastern.edu
 
 #include<stdio.h>
 #include<stdlib.h>

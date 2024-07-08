@@ -62,6 +62,7 @@ int dequeue(int *arr)
     for (int i=0; i<rear; i++){
         arr[i]=arr[i+1];
     }
+
     rear--;
     return val;
 }
