@@ -1,6 +1,11 @@
 /* Lab Assignment for Hospital ER */
+<<<<<<< HEAD
 //Name: Yao Chong Chow
 //Email: chow.ya@northeastern.edu
+=======
+//enter your name here
+//enter your email here
+>>>>>>> upstream/main
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -49,6 +54,7 @@ void heapify(pq*p2,int n, int i ){
     int lchild=2*i+1;/*left =2*i+1*/
     int rchild=2*i+2;/*right=2*i+2*/
     /*insert your code here*/
+<<<<<<< HEAD
     if (lchild<n && p2->heap[lchild].priority>=p2->heap[largest].priority){
         largest=lchild;
     }
@@ -62,6 +68,8 @@ void heapify(pq*p2,int n, int i ){
         heapify(p2,n,largest);
     }
 
+=======
+>>>>>>> upstream/main
 
 }
 
@@ -69,6 +77,7 @@ void heapify(pq*p2,int n, int i ){
 void shiftUp(pq* p2,int i)
 {
     /*insert your code here*/
+<<<<<<< HEAD
     
     int parent = (i-1)/2;
     while (i>0 && p2->heap[parent].priority<p2->heap[i].priority) {
@@ -76,6 +85,9 @@ void shiftUp(pq* p2,int i)
         i=parent;
         parent=(i-1)/2;
     }
+=======
+       
+>>>>>>> upstream/main
     
 }
  
