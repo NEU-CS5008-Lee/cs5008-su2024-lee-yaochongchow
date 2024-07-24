@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ycchow/Desktop/Computer Science/Summer 2024/CS 5008/Code/cs5008-su2024-lee-yaochongchow/lab-assignment11/partition-dp-lab'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _max, symObjAddr: 0x0, symBinAddr: 0x1000037CC, symSize: 0x48 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _max, symObjAddr: 0x0, symBinAddr: 0x1000037CC, symSize: 0x48 }
+  - { offsetInCU: 0x77, offset: 0x77, size: 0x8, addend: 0x0, symName: _min, symObjAddr: 0x48, symBinAddr: 0x100003814, symSize: 0x48 }
+  - { offsetInCU: 0xAD, offset: 0xAD, size: 0x8, addend: 0x0, symName: _sum, symObjAddr: 0x90, symBinAddr: 0x10000385C, symSize: 0x70 }
+  - { offsetInCU: 0x11B, offset: 0x11B, size: 0x8, addend: 0x0, symName: _print_books, symObjAddr: 0x100, symBinAddr: 0x1000038CC, symSize: 0x98 }
+  - { offsetInCU: 0x169, offset: 0x169, size: 0x8, addend: 0x0, symName: _print_matrix, symObjAddr: 0x198, symBinAddr: 0x100003964, symSize: 0xEC }
+  - { offsetInCU: 0x1C5, offset: 0x1C5, size: 0x8, addend: 0x0, symName: _reconstruct_partition, symObjAddr: 0x284, symBinAddr: 0x100003A50, symSize: 0xB4 }
+  - { offsetInCU: 0x213, offset: 0x213, size: 0x8, addend: 0x0, symName: _partition, symObjAddr: 0x338, symBinAddr: 0x100003B04, symSize: 0x328 }
+  - { offsetInCU: 0x2B7, offset: 0x2B7, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x660, symBinAddr: 0x100003E2C, symSize: 0xE4 }
+...
